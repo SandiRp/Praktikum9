@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> KONTAK </title>
+</head>
+<form action="simpan_kontak.php" method="POST" onsubmit="return cek()">
+	<center>
+	<table>
+		<tr>
+			<td>Nama : <input type="text" name="nama" id="namao"></td>
+		</tr>
+		<tr><td>Jenis Kelamin :
+			<input type="radio" name="jkel" value="Laki-Laki">Laki - Laki
+			<input type="radio" name="jkel" value="Perempuan">Perempuan
+			</td>
+		</tr>
+		<tr>
+			<td>Email : <input type="Email" name="email" id="email"></td>
+		</tr>
+		<tr>
+			<td>Alamat : <input type="text" name="alamat" id="alamat"></td>
+		</tr>
+		<tr>
+			<td>Kota : 
+				<select name="kota">
+					<option>Surabaya</option>
+					<option>Sidoarjo</option>
+					<option>Gresik</option>
+					<option>Lamongan</option>
+				</select>
+			 </td>
+		</tr>
+		<tr>
+			<td>Pesan : <input type="text" name="pesan" id="pesan"></td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit" name="submit" value="Kirim">
+			</td>
+		</tr>
+	</table>
+</center>
+</form>
+</body>
+<script type="text/javascript">
+	function cek(){
+		var nama = document.getElementById("namao").value;
+		var email = document.getElementById("email").value;
+		var alamat = document.getElementById("alamat").value;
+		var pesan = document.getElementById("pesan").value;
+		if (nama!="" && email!="" && alamat!="" && pesan!="") {
+			alert('Data Berhasil ditambah,Terima Kasih')
+			return true;
+		}else{
+			alert('Data Harus Diisi Semua,Silahkan Diisi lagi')
+			return false;
+		}
+	}
+</script>
+</html>
